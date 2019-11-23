@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./SmurfForm.css";
 
 const SmurfForm = ({ onSubmitSmurf }) => {
   const [smurf, setSmurf] = useState({
@@ -16,39 +17,45 @@ const SmurfForm = ({ onSubmitSmurf }) => {
   return (
     <div className="form-container">
       <form onSubmit={onSubmitSmurf}>
-        <label htmlFor="name">
-          Name:{" "}
-          <input
-            name="name"
-            id="name"
-            type="text"
-            placeholder="Smurf name"
-            value={smurf.name}
-            onChange={handleFieldChange}
-          />
-        </label>
-        <label htmlFor="age">
-          Age:{" "}
-          <input
-            name="age"
-            id="age"
-            type="text"
-            placeholder="Smurf age"
-            value={smurf.age}
-            onChange={handleFieldChange}
-          />
-        </label>
-        <label htmlFor="height">
-          Height:{" "}
-          <input
-            name="height"
-            id="height"
-            type="text"
-            placeholder="Smurf height"
-            value={smurf.height}
-            onChange={handleFieldChange}
-          />
-        </label>
+        <div>
+          <label htmlFor="name">
+            Name:{" "}
+            <input
+              name="name"
+              id="name"
+              type="text"
+              placeholder="Smurf name"
+              value={smurf.name}
+              onChange={handleFieldChange}
+            />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="age">
+            Age:{" "}
+            <input
+              name="age"
+              id="age"
+              type="text"
+              placeholder="Smurf age"
+              value={smurf.age}
+              onChange={handleFieldChange}
+            />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="height">
+            Height:{" "}
+            <input
+              name="height"
+              id="height"
+              type="text"
+              placeholder="Smurf height"
+              value={smurf.height}
+              onChange={handleFieldChange}
+            />
+          </label>
+        </div>
         <button>Add Smurf</button>
       </form>
     </div>
