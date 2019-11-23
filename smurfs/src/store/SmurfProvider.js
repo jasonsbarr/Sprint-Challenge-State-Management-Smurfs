@@ -6,7 +6,7 @@ const SmurfProvider = ({ smurfReducer, smurfContext, children }) => {
   const smurfStore = useMemo(() => [smurfs, dispatch], [smurfs]);
 
   return (
-    <smurfContext.Provider value={smurfStore}>
+    <smurfContext.Provider reducer={smurfReducer} value={smurfStore}>
       {children}
     </smurfContext.Provider>
   );
