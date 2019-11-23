@@ -1,6 +1,6 @@
 import React from "react";
 
-const Smurf = ({ age, height, id, name }) => (
+const Smurf = ({ smurf: { age, height, id, name } }) => (
   <div id={`smurf-${id}`}>
     <p>
       <span>Name:</span> {name}
