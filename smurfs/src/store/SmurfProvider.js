@@ -1,7 +1,7 @@
 import React, { useReducer, useMemo } from "react";
 
 const SmurfProvider = ({ smurfReducer, smurfContext, children }) => {
-  const [smurfs, dispatch] = useReducer(smurfReducer, smurfContext);
+  const [smurfs, dispatch] = useReducer(smurfReducer, { smurfs: [] });
 
   const smurfStore = useMemo(() => [smurfs, dispatch], [smurfs]);
 
