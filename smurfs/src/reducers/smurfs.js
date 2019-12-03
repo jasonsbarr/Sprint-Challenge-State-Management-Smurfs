@@ -3,7 +3,7 @@ import { makeReducer, setState } from "../utils";
 const setSmurfs = setState("smurfs");
 
 const SET_SMURFS = (state, { payload: smurfs }) => {
-  const newSmurfs = [...state.smurfs, ...smurfs];
+  const newSmurfs = [...smurfs];
   return setSmurfs(state, newSmurfs);
 };
 

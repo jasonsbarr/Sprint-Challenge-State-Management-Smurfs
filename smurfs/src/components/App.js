@@ -23,7 +23,10 @@ const App = () => {
       headers: {
         "Content-Type": "application/json"
       }
-    }).catch(err => console.error(err));
+    })
+      .then(res => res.json())
+      .then(data => dispatch({ type: SET_SMURFS, payload: data }))
+      .catch(err => console.error(err));
   };
 
   useEffect(() => {
